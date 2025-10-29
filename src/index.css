@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: Manrope,"ui-sans-serif", "system-ui";
+  --color-primary-brown: #d87d4a;
+  --color-secondary-brown: #fbaf85;
+  --color-primary-black: #101010;
+  --color-secondary-black: #000000;
+  --color-primary-white: #f1f1f1;
+  --color-primary-white2: #fafafa;
+  --color-secondary-white: #ffffff;
+}
+
+h1{
+  font-family: manrope;
+  font-weight:700;
+  font-size: 56px;
+  line-height: 58px;
+  letter-spacing: 2px;
+}
+
+h2{
+  font-family:manrope;
+  font-weight: 700;
+  font-size: 40px;
+  line-height:44px;
+  letter-spacing:1.5px;
+}
+h3{
+  font-family:manrope;
+  font-weight: 700;
+  font-size: 32px;
+  line-height:36px;
+  letter-spacing:1.15px;
+}
+h4{
+  font-family:manrope;
+  font-weight: 700;
+  font-size: 28px;
+  line-height:38px;
+  letter-spacing:2px;
+}
+h5{
+  font-family:manrope;
+  font-weight: 700;
+  font-size: 24px;
+  line-height:33px;
+  letter-spacing:1.7px;
+}
+h6{
+  font-family:manrope;
+  font-weight: 700;
+  font-size: 18px;
+  line-height:24px;
+  letter-spacing:1.3px;
+}
+p{
+  font-family:manrope;
+  
+  line-height: 25px;
+}
+.overline-text{
+  font-family:manrope;
+  letter-spacing: 10px;
+  line-height:19px;
+}
