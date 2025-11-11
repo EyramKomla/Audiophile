@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { BsCart3 } from "react-icons/bs"
 import { FiMenu } from "react-icons/fi"
 import { Link, NavLink } from "react-router-dom"
 import { useMediaQuery } from "usehooks-ts"

@@ -1,12 +1,11 @@
 import { useMediaQuery } from 'usehooks-ts'
 import { useContext } from 'react';
 import { CartContext } from '../Context/CartContext';
-import { BsDash, BsPlus } from 'react-icons/bs';
 
 function CheckoutPage() {
    const isSmall = useMediaQuery('(max-width: 1100px)');
    const cartDetails = useContext(CartContext)!;
-   const {cart, setCart} = cartDetails;
+   const {cart} = cartDetails;
    let accessibleCartItems = cart.map((item) => JSON.parse(item));
    let totalPrice = 0;
    accessibleCartItems.forEach((item)=>{

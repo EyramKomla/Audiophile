@@ -10,6 +10,8 @@ import { useMediaQuery } from "usehooks-ts"
 import { CartContext } from "../Context/CartContext"
 import { useContext, useState } from "react";
 
+type Category = "headphones" | "speakers" | "earphones";
+
 type ItemProps = {
     item: string,
     qty: number,
@@ -28,7 +30,12 @@ function ProductDetailsPage() {
             setCart([...cart, JSON.stringify(item)]);
     }
 
-    const product = productData[category]?.find((item: any) => item.index === parseInt(id ?? "0"));
+    const product = category ? productData[category as Category]?.find((item: any) => item.index === parseInt(id ?? "0")) : undefined;
+
+    if(!product){
+        return <div>Product not found</div>
+    }
+
     console.log(product);
     console.log(cart);
 
