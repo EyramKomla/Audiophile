@@ -4,6 +4,8 @@ import SpeakersPage from './PageContent/SpeakersPage';
 import EarphonesPage from './PageContent/EarphonesPage';
 import Home from './PageContent/Home';
 import MasterLayout from './Pages/MasterLayout';
+import ProductDetailsPage from './PageContent/ProductDetailsPage';
+import CheckoutPage from './PageContent/CheckoutPage';
 
 function Router() {
   const routes = [
@@ -26,6 +28,14 @@ function Router() {
             {
                 path: 'earphones',
                 element: <EarphonesPage/>
+            },
+            {
+                path: ':category/:id',
+                element: <ProductDetailsPage/>
+            },
+            {
+                path: 'checkout',
+                element: <CheckoutPage/>
             }
         ],
     },
