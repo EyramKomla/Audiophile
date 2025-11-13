@@ -30,7 +30,7 @@ function CartModal() {
         {isOpen &&
             <div className="w-screen h-screen  fixed top-0 bottom-0 left-0 right-0 text-black">
                 <div className="w-screen h-screen bg-black/50 absolute" onClick={() => setIsOpen(!isOpen)}></div>
-                <div className={` ${isSmall ? "w-[300px]" : "w-[377px]"} h-auto bg-white rounded-lg absolute right-[10%] top-[10%]
+                <div className={` ${isSmall ? "w-[300px]" : "w-[377px]"} h-auto max-h-[600px] bg-white rounded-lg absolute right-[10%] top-[10%]
                             flex flex-col gap-4 px-3 py-6 overflow-y-auto`}>
                     <div className="w-full h-[25px] flex justify-between">
                         <div className="flex gap-2">

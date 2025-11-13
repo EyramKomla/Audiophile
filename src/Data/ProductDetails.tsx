@@ -2,7 +2,7 @@ export const productData = {
     headphones: [
                     {
                         index: 1,
-                        img: "/src/assets/headphones/X99 MARK II.png",
+                        img: "/assets/headphones/X99 MARK II.png",
 
                         isNew: true,
                         productName: "XX99 MARK II HEADPHONES",
@@ -38,7 +38,7 @@ export const productData = {
                     },
                     {
                         index: 2,
-                        img: "/src/assets/headphones/X99 MARK I.png",
+                        img: "/assets/headphones/X99 MARK I.png",
                         isNew: false,
                         productName: "XX99 MARK I HEADPHONES",
                         productDesc: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
@@ -68,7 +68,7 @@ export const productData = {
                     },
                     {
                         index: 3,
-                        img: "/src/assets/headphones/XX59 HEADPHONES.png",
+                        img: "/assets/headphones/XX59 HEADPHONES.png",
                         isNew: false,
                         productName: "XX59 HEADPHONES",
                         productDesc: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
@@ -100,14 +100,14 @@ export const productData = {
     earphones: [
                     {
                         index: 1,
-                        img: "/src/assets/Earphones/YX1 WIRELESS EARPHONES.png",
+                        img: "/assets/earphones/YX1 WIRELESS EARPHONES.png",
                         isNew: true,
                         productName: "YX1 WIRELESS EARPHONES",
                         productDesc: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
                         price: "$ 599",
-                        mainImg: "/src/assets/Earphones/YX1-mainImg.png",
-                        smallImg1: "/src/assets/Earphones/YX1-smallImg1.png",
-                        smallImg2: "/src/assets/Earphones/YX1-smallImg2.png",
+                        mainImg: "/src/assets/earphones/YX1-mainImg.png",
+                        smallImg1: "/assets/earphones/YX1-smallImg1.png",
+                        smallImg2: "/assets/earphones/YX1-smallImg2.png",
                         features: "Experience unrivalled stereo sound thanks to innovative acoustic technology. With improved ergonomics designed for full day wearing, these revolutionary earphones have been finely crafted to provide you with the perfect fit, delivering complete comfort all day long while enjoying exceptional noise isolation and truly immersive sound. The YX1 Wireless Earphones features customizable controls for volume, music, calls, and voice assistants built into both earbuds. The new 7-hour battery life can be extended up to 28 hours with the charging case, giving you uninterrupted play time. Exquisite craftsmanship with a splash resistant design now available in an all new white and grey color scheme as well as the popular classic black.",
                         inTheBox: [
                             {
@@ -136,12 +136,12 @@ export const productData = {
     speakers: [
                 {
                     index: 1,
-                    img: "/src/assets/Speakers/ZX9 SPEAKER.png",
+                    img: "/assets/speakers/ZX9 SPEAKER.png",
                     isNew: true,
                     productName: "ZX9 SPEAKER",
                     productDesc: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
                     price: "$ 4,500",
-                    mainImg: "/src/assets/Speakers/ZX9-main-img.png",
+                    mainImg: "/assets/speakers/ZX9-main-img.png",
                     smallImg1: "/src/assets/Speakers/ZX9 SPEAKER.png",
                     smallImg2: "",
                     features: "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m). Discover clear, more natural sounding highs than the competition with ZX9’s signature planar diaphragm tweeter. Equally important is its powerful room-shaking bass courtesy of a 6.5” aluminum alloy bass unit. You’ll be able to enjoy equal sound quality whether in a large room or small den. Furthermore, you will experience new sensations from old songs since it can respond to even the subtle waveforms.",
@@ -170,7 +170,7 @@ export const productData = {
                 },
                 {
                     index: 2,
-                    img: "/src/assets/Speakers/ZX7 SPEAKER.png",
+                    img: "/assets/speakers/ZX7 SPEAKER.png",
                     isNew: false,
                     productName: "ZX7 SPEAKER",
                     productDesc: "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",

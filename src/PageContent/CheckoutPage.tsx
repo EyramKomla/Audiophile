@@ -1,6 +1,7 @@
 import { useMediaQuery } from 'usehooks-ts'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../Context/CartContext';
+import CheckoutModal from './CheckoutModal';
 
 function CheckoutPage() {
    const isSmall = useMediaQuery('(max-width: 1100px)');
@@ -12,8 +13,10 @@ function CheckoutPage() {
        const priceNumber = parseInt(item.price.replace('$ ', '').replace(',', ''));
        totalPrice += priceNumber * item.qty;
    });
+   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={`w-full bg-primary-white py-10 ${isSmall ? "px-5 flex-col gap-x-5" : "px-30"} flex gap-x-2 items-start`}>
+        <CheckoutModal isOpen={isOpen}/>
         <form className={`${isSmall ? "w-full" : "w-[60%]"} bg-white rounded-xl px-10 py-10 flex flex-col gap-y-10`}>
             <h3 className='pb-5'>CHECKOUT</h3>
             
@@ -212,7 +215,8 @@ function CheckoutPage() {
             </div>
 
             <div className='w-full h-12 px-6'>
-                <button className="w-full h-12 bg-primary-brown text-white text-sm tracking-[1px]">
+                <button className="w-full h-12 bg-primary-brown text-white text-sm tracking-[1px]"
+                    onClick={() => setIsOpen(!isOpen)}>
                     <p className='font-bold'>CONTINUE & PAY</p>
                 </button>
             </div>
