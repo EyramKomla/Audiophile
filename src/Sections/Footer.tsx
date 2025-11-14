@@ -8,7 +8,7 @@ function DesktopFooter() {
             max-md:flex-col ">
             <div className="w-[50%] flex flex-col gap-y-7 px-5
                 max-md:w-screen">
-                <img src="\src\assets\logo.png" width={100}/>
+                <img src="/assets/logo.png" width={100}/>
                 <p className="opacity-50 text-[15px]">Audiophile is an all in one stop to fulfill your audio needs.
                     We're a small team of music lovers and sound specialists who are devoted
                     to helping you get the most out of personal audio. Come and visit our demo - 
@@ -45,7 +45,7 @@ function MobileFooter(){
     const isSmall = useMediaQuery('(max-width: 700px)');
     return (
         <div className={`w-screen flex flex-col gap-y-10 pb-10 text-primary-white ${isSmall ? "text-center px-0" : " px-30"}`}>
-            <img src="\src\assets\logo.png" width={100} className={isSmall ? "mx-auto" : ""}/>
+            <img src="/assets/logo.png" width={100} className={isSmall ? "mx-auto" : ""}/>
             <div className="w-full">
                 <nav className={`flex ${isSmall ? "flex-col gap-y-3 items-center" : ""} justify-around font-manrope font-bold tracking-[2px] text-[13px]`}>
                     <Link to="/" className="hover:text-primary-brown transition duration-300">

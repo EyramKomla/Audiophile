@@ -18,7 +18,7 @@ function BusinessStoryComponent() {
                 audio equipment.
               </p>
             </div>
-            <img src="\src\assets\story-image.png" 
+            <img src="/assets/story-image.png" 
                   alt="Story image" 
                   className={`w-[40%] h-full object-cover object-left rounded-lg  ${isMobile ? "w-full h-[45%]" : ""}`}/>
           </div>

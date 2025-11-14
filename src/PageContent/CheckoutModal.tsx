@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { FaCheck } from "react-icons/fa";
 import { CartContext } from "../Context/CartContext";
+import { useEffect } from "react";
 
 type CheckoutModalProps = {
     isOpen: boolean,
@@ -16,9 +17,17 @@ function CheckoutModal({isOpen}: CheckoutModalProps) {
         totalPrice += priceNumber * item.qty;
     });
 
+    useEffect(() => {
+            if (isOpen) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "";
+            }
+        }, [isOpen]);
+
   return (
     isOpen && <div className="w-screen h-screen bg-black/50 fixed inset-0 text-white flex justify-center items-center z-50">
-            <div className="w-[540px] p-5 flex flex-col gap-y-4 h-auto max-h-[500px] overflow-y-scroll bg-white rounded-lg text-black">
+            <div className="w-[90vw] max-w-[540px] p-5 flex flex-col gap-y-4 h-auto max-h-[500px] overflow-y-scroll bg-white rounded-lg text-black">
 
                 <div className="w-16 h-16 bg-primary-brown rounded-[50%] flex shrink-0 justify-center items-center">
                     <FaCheck size={22} color="white"/>

@@ -16,7 +16,7 @@ function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
         ${isOpen ? "translate-x-0" : "-translate-x-full"} z-30 font-manrope`}
     >
       <div className="flex items-center justify-between p-4 border-b border-gray-700">
-        <img src="\src\assets\logo.png" width={100}/>
+        <img src="/assets/logo.png" width={100}/>
         <button onClick={toggleSidebar} className="text-gray-400 hover:text-white">
           ✕
         </button>
@@ -66,7 +66,7 @@ function MobileHeader(){
                         <FiMenu size={24}/>
                     </button>
                     <Link to="/">
-                        <img src="\src\assets\logo.png" width={100}/>
+                        <img src="/assets/logo.png" width={100}/>
                     </Link>
                 </div>
                 <CartModal/>
@@ -80,7 +80,7 @@ function DesktopHeader(){
         <div className="w-screen px-30">
             <div className="w-full h-20 flex text-white justify-between items-center">
                 <Link to="/">
-                    <img src="\src\assets\logo.png" width={100}/>
+                    <img src="/assets/logo.png" width={100}/>
                 </Link>
                 <nav className="flex gap-6 font-manrope font-semibold text-sm">
                     <NavLink 

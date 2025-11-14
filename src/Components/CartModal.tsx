@@ -4,6 +4,7 @@ import { CartContext } from "../Context/CartContext";
 import { BsDash, BsPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
+import { useEffect } from "react";
 
 
 function CartModal() {
@@ -21,6 +22,13 @@ function CartModal() {
         const priceNumber = parseInt(item.price.replace('$ ', '').replace(',', ''));
         totalPrice += priceNumber * item.qty;
     });
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [isOpen]);
     
   return (
     <div className="z-50">
