@@ -22,6 +22,7 @@ function CartModal() {
         const priceNumber = parseInt(item.price.replace('$ ', '').replace(',', ''));
         totalPrice += priceNumber * item.qty;
     });
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
@@ -36,7 +37,7 @@ function CartModal() {
             <BsCart3 size={24}/>
         </button>
         {isOpen &&
-            <div className="w-screen h-screen  fixed top-0 bottom-0 left-0 right-0 text-black">
+            <div className="w-screen h-screen  fixed inset-0 text-black">
                 <div className="w-screen h-screen bg-black/50 absolute" onClick={() => setIsOpen(!isOpen)}></div>
                 <div className={` ${isSmall ? "w-[300px]" : "w-[377px]"} h-auto max-h-[600px] bg-white rounded-lg absolute right-[10%] top-[10%]
                             flex flex-col gap-4 px-3 py-6 overflow-y-auto`}>
@@ -65,15 +66,30 @@ function CartModal() {
                                             </div>
                                             <div>
                                                 <div className="w-24 h-8 flex bg-primary-white">
-                                                    <div className="w-[33.3%] h-full flex justify-center items-center">
-                                                        <BsDash size={18}/>
-                                                    </div>
+                                                    <button className="w-[33.3%] h-full flex justify-center items-center"
+                                                     onClick={() => {
+                                                        accessibleCartItems[index].qty = Math.max(1, accessibleCartItems[index].qty - 1);
+                                                        setCart(accessibleCartItems.map((itm) => JSON.stringify(itm)));
+                                                    }}>
+                                                        <div>
+                                                            <BsDash size={18}/>
+                                                        </div>
+                                                    </button>
+
                                                     <div className="w-[33.3%] h-full flex justify-center items-center">
                                                         <p className="text-[13px] font-bold">{item.qty}</p>
                                                     </div>
-                                                    <div className="w-[33.3%] h-full flex justify-center items-center">
-                                                        <BsPlus size={18}/>
-                                                    </div>
+
+                                                    <button className="w-[33.3%] h-full flex justify-center items-center"
+                                                     onClick={() =>{
+                                                        accessibleCartItems[index].qty = accessibleCartItems[index].qty + 1;
+                                                        setCart(accessibleCartItems.map((itm) => JSON.stringify(itm)))
+                                                    }}>
+
+                                                        <div>
+                                                            <BsPlus size={18}/>
+                                                        </div>
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>

@@ -12,7 +12,7 @@ type SidebarProps = {
 function Sidebar({ isOpen, toggleSidebar }: SidebarProps) {
   return (
     <div
-      className={`fixed top-0 left-0 h-full w-64 bg-gray-900 text-white transition-transform duration-300 ease-in-out
+      className={`fixed top-0 left-0 h-full w-64 px-5 bg-[#1c1f24] text-white transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"} z-30 font-manrope`}
     >
       <div className="flex items-center justify-between p-4 border-b border-gray-700">
@@ -57,7 +57,7 @@ function MobileHeader(){
     const toggleSidebar = () => setIsOpen((prev) => !prev)
 
     return (
-        <div className={`w-screen ${isSmall ? "px-10" : "px-30"} text-primary-white`}>
+        <div className={`w-full ${isSmall ? "px-10" : "px-30"} text-primary-white`}>
             <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
 
             <div className="w-full h-9 flex justify-between items-center">
@@ -77,7 +77,7 @@ function MobileHeader(){
 
 function DesktopHeader(){
     return (
-        <div className="w-screen px-30">
+        <div className="w-full px-30">
             <div className="w-full h-20 flex text-white justify-between items-center">
                 <Link to="/">
                     <img src="/assets/logo.png" width={100}/>

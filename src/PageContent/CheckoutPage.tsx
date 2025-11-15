@@ -14,6 +14,7 @@ function CheckoutPage() {
        totalPrice += priceNumber * item.qty;
    });
    const [isOpen, setIsOpen] = useState(false);
+   
   return (
     <div className={`w-full bg-primary-white py-10 ${isSmall ? "px-5 flex-col gap-x-5" : "px-30"} flex gap-x-2 items-start`}>
         <CheckoutModal isOpen={isOpen}/>

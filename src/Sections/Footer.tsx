@@ -4,7 +4,7 @@ import { useMediaQuery } from "usehooks-ts"
 
 function DesktopFooter() {
     return (
-        <div className="text-primary-white w-screen h-[365px] py-10 px-30 flex 
+        <div className="text-primary-white w-full h-[365px] py-10 px-30 flex 
             max-md:flex-col ">
             <div className="w-[50%] flex flex-col gap-y-7 px-5
                 max-md:w-screen">

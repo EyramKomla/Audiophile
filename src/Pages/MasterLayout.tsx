@@ -9,7 +9,10 @@ function MasterLayout() {
     <div className='bg-primary-black w-full min-h-screen'>
       <ScrollUtility/>
       <Header/>
+      <div className="overflow-x-hidden">
+
         <Outlet/>
+      </div>
       <Footer/>
     </div>
   )
